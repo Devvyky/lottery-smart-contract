@@ -9,6 +9,7 @@
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "chai": "^4.3.6",
+    "dotenv": "^16.0.0",
     "ethereum-waffle": "^3.4.4",
     "ethers": "^5.6.4",
     "hardhat": "^2.9.3",
@@ -25,7 +26,8 @@
     "eject": "react-scripts eject",
     "node": "npx hardhat node",
     "compile": "npx hardhat compile",
-    "deploy": "npx hardhat run scripts/deploy.js --network localhost"
+    "deploy": "npx hardhat run scripts/deploy.js --network ropsten",
+    "deploy-local": "npx hardhat run scripts/deploy.js --network localhost"
   },
   "eslintConfig": {
     "extends": [

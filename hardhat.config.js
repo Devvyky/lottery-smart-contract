@@ -1,3 +1,4 @@
+require('dotenv').config();
 require('@nomiclabs/hardhat-waffle');
 
 // This is a sample Hardhat task. To learn how to create your own go to
@@ -16,6 +17,7 @@ task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
+
 module.exports = {
   solidity: '0.8.4',
   paths: {
@@ -24,6 +26,10 @@ module.exports = {
   networks: {
     hardhat: {
       chainId: 1337,
+    },
+    ropsten: {
+      url: process.env.REROPSTEN_URL,
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
 };
